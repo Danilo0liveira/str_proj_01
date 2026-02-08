@@ -46,14 +46,3 @@ As variáveis globais, como `buffer_out`, são protegidas por um **Mutex**, gara
 
 ---
 
-## 🚀 Como Compilar e Executar
-
-1.  **Pré-requisitos:** Possuir o compilador `gcc` e a biblioteca de threads POSIX instalada.
-2.  **Compilação:**
-    ```bash
-    gcc main.c -o celula_manufatura -lpthread
-    ```
-3.  **Execução:**
-    ```bash
-    ./celula_manufatura
-    ```
