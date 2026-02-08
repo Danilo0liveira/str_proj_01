@@ -2,7 +2,7 @@
 
 # 🤖 Simulação de Célula de Manufatura Automatizada
 
-Este projeto implementa o controle de uma célula de manufatura utilizando **Programação Concorrente** em C. A simulação coordena duas máquinas de processamento, um robô industrial compartilhado e um buffer de saída limitado, resolvendo problemas clássicos de sincronização como **Deadlock** e **Condição de Corrida**.
+Este projeto implementa o controle de uma célula de manufatura utilizando *** em C. A simulação coordena duas máquinas de processamento, um robô industrial compartilhado e um buffer de saída limitado, resolvendo problemas clássicos de sincronização como **Deadlock** e **Condição de Corrida**.
 
 ---
 
@@ -13,8 +13,6 @@ O sistema é composto por três agentes principais que operam simultaneamente:
 * **Máquinas (M1 e M2):** Estações independentes que processam matéria-prima.
 * **Robô Industrial:** Único agente de transporte que move peças das máquinas para o buffer.
 * **Esteira (Buffer de Saída):** Zona de armazenamento com capacidade máxima para **2 peças**.
-
-
 
 ---
 
