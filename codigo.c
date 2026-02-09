@@ -45,7 +45,7 @@ void *robot(void *arg)
             {
                 buffer_m[i]-=1;
                 sem_post(&m[i]);
-                 printf("\nmachine buffer %d: %d", i, buffer_m[i]);
+                 printf("\nmachine %d buffer : %d", i, buffer_m[i]);
                 break;
             }
         }
