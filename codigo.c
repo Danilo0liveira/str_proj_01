@@ -27,7 +27,7 @@ void *machine(void *arg)
         sleep(rand() % MACHINE_MAX_TIME + 1);
         sem_wait(&m[id]);
         buffer_m[id]+=1;
-        printf("\ngerando produto machine %d %d", id, buffer_m[id]);
+        printf("\nmachine %d buffer : %d", id, buffer_m[id]);
         sem_post(&s);
     }
 }
@@ -45,14 +45,14 @@ void *robot(void *arg)
             {
                 buffer_m[i]-=1;
                 sem_post(&m[i]);
-                printf("\npegando produto machine %d %d", i, buffer_m[i]);
+                 printf("\nmachine buffer %d: %d", i, buffer_m[i]);
                 break;
             }
         }
         sem_wait(&full);
         sem_wait(&mutex);
         buffer_out+=1;
-        printf("\nbufferout %d", buffer_out);
+        printf("\nbufferout: %d", buffer_out);
         sem_post(&mutex);
     }
 }
@@ -63,10 +63,10 @@ void *conveyor(void *arg)
     {
         sleep(rand() % CONVEYOR_MAX_TIME + 1);
         sem_wait(&mutex);
-        printf("\nbufferout %d", buffer_out);
         if (buffer_out>0)
         {
             buffer_out-=1;
+            printf("\nbufferout: %d", buffer_out);
             sem_post(&full);
         }
         sem_post(&mutex);
