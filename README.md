@@ -41,12 +41,12 @@ O robô só deposita uma peça se o semáforo `full` (inicializado em 2) permiti
 ### 2. Evitando o Bloqueio (Deadlock)
 O sistema garante fluidez pois a thread da esteira (`conveyor`) atua como um consumidor constante, garantindo que o recurso "espaço no buffer" seja eventualmente liberado.
 
+### 3. Exclusão Mútua
+As variáveis globais, como `buffer_out`, são protegidas por um **Mutex**, garantindo que a integridade dos dados seja mantida mesmo com múltiplas threads acessando os recursos.
+
  # Vídeo Explicativo
  
 [Vídeo Explicativo](https://drive.google.com/file/d/1v2L3mW75zkRtDezcUXF4m-9wBn85M33S/view?usp=sharing)
-
-### 3. Exclusão Mútua
-As variáveis globais, como `buffer_out`, são protegidas por um **Mutex**, garantindo que a integridade dos dados seja mantida mesmo com múltiplas threads acessando os recursos.
 
 ---
 
