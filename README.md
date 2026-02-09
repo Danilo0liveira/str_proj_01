@@ -1,5 +1,7 @@
 # README
 
+codespace environment: https://codespaces.new/Danilo0liveira/str_proj_01
+
 # 🤖 Simulação de Célula de Manufatura Automatizada
 
 Este projeto implementa o controle de uma célula de manufatura utilizando *** em C. A simulação coordena duas máquinas de processamento, um robô industrial compartilhado e um buffer de saída limitado, resolvendo problemas clássicos de sincronização como **Deadlock** e **Condição de Corrida**.
